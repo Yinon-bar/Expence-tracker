@@ -1,8 +1,8 @@
 function ExpenseItem() {
   return (
     <div>
-      <div className="card border-danger mb-3 m-3 shadow rounded rounded-4">
-        <div className="card-header">הוצאה</div>
+      <div className="card border-danger my-3 shadow ">
+        <div className="card-header bg-danger ">הוצאה</div>
         <div className="card-body d-flex">
           <div className="col-lg-6">
             <h4 className="card-title">קניית עכבר</h4>
