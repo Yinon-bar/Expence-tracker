@@ -9,11 +9,16 @@ function ExpenceList(props) {
     setYear(selectedYear);
   };
 
+  const filteredExpenses = props.expensesArr.filter((expense) => {
+    // console.log(expense);
+    return expense.date.getFullYear().toString() === year;
+  });
+
   return (
     <div>
       <h3>{year}</h3>
       <ExpensesFilter filterChanged={filterChanged} />
-      {props.expensesArr.map((obj) => (
+      {filteredExpenses.map((obj) => (
         <ExpenseItem key={+obj.id} data={obj} />
       ))}
     </div>
