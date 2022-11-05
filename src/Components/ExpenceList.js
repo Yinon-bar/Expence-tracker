@@ -18,9 +18,11 @@ function ExpenceList(props) {
     <div>
       <h3>{year}</h3>
       <ExpensesFilter filterChanged={filterChanged} />
-      {filteredExpenses.map((obj) => (
-        <ExpenseItem key={+obj.id} data={obj} />
-      ))}
+      {filteredExpenses.length === 0 ? (
+        <h2>There is no expenses to show</h2>
+      ) : (
+        filteredExpenses.map((obj) => <ExpenseItem key={+obj.id} data={obj} />)
+      )}
     </div>
   );
 }
