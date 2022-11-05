@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function NewExpence() {
+function NewExpence(props) {
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");
   const [date, setDate] = useState("");
@@ -18,10 +18,12 @@ function NewExpence() {
   const submitForm = (event) => {
     event.preventDefault();
     const formData = {
-      fTitle: title,
-      fAmount: amount,
-      fDate: new Date(date),
+      title: title,
+      amount: amount,
+      date: new Date(date),
     };
+    console.log(props);
+    props.onAddExpense(formData);
     console.log(formData);
     setTitle("");
     setAmount("");
