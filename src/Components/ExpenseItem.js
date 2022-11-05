@@ -5,12 +5,12 @@ function ExpenseItem(props) {
         <div className="card-header bg-danger ">הוצאה</div>
         <div className="card-body d-flex">
           <div className="col-lg-6">
-            <h4 className="card-title">{props.obj.title}</h4>
+            <h4 className="card-title">{props.data.title}</h4>
             <p className="card-text">תיאור ההוצאה</p>
           </div>
           <div className="col-lg-6 text-center d-flex align-items-center">
             <span className="badge rounded-pill bg-danger p-3 font-size-4 fs-5 mx-auto">
-              {props.obj.amount}$
+              {props.data.amount}$
             </span>
             <span className="badge rounded-pill bg-secondary p-3 font-size-4 fs-5 mx-auto">
               11/12/2021

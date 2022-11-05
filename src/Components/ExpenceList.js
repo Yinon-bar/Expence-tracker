@@ -7,7 +7,6 @@ function ExpenceList(props) {
   const filterChanged = (selectedYear) => {
     // console.log(selectedYear);
     setYear(selectedYear);
-    console.log(year);
   };
 
   return (
@@ -15,7 +14,7 @@ function ExpenceList(props) {
       <h3>{year}</h3>
       <ExpensesFilter filterChanged={filterChanged} />
       {props.expensesArr.map((obj) => (
-        <ExpenseItem key={obj.id} obj={obj} />
+        <ExpenseItem key={+obj.id} data={obj} />
       ))}
     </div>
   );
